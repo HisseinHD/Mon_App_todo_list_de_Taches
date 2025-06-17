@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="todo-app">
+        <h1>Gestionnaire de Tâches</h1>
+    
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Ajouter une nouvelle tâche">
+            <button id="add-btn">Ajouter</button>
+        </div>
+
+        <h2>Liste des Tâches</h2>
+        <hr>
+   
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Toutes (<span id="all-count">10</span>)</button>
+            <button class="filter-btn" data-filter="pending">En attente (<span id="pending-count">20</span>)</button>
+            <button class="filter-btn" data-filter="completed">Terminées (<span id="completed-count">30</span>)</button>
+        </div>
+
+        <ul id="task-list">
+            <li class="task-item">
+                <input type="checkbox" class="task-checkbox">
+                <span class="task-text">Appel Maman</span>
+                <div class="task-actions">
+                    <button class="edit-btn"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" class="task-checkbox">
+                <span class="task-text">Appel Papa</span>
+                <div class="task-actions">
+                    <button class="edit-btn"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </li>
+            <!-- Ajoutez d'autres tâches ici -->
+        </ul>
+
+        <div class="actions">
+            <footer>Copyright &copy; Hissein Haroun D</footer>
+            <button id="clear-all">Tout effacer</button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
